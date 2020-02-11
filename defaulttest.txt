@@ -1,0 +1,85 @@
+Date: Sat Dec 28 01:07:56 IST 2019
+Test set: default
+Kernel: 5.3.7-301.fc31.x86_64
+Release: Fedora release 31 (Thirty One)
+Result: FAIL
+Failed Tests: ./default/paxtest
+Warned Tests: ./default/sysfs-perms
+============================================================
+Starting test ./default/memfd
+memfd: CREATE
+memfd: BASIC
+memfd: SEAL-WRITE
+memfd: SEAL-SHRINK
+memfd: SEAL-GROW
+memfd: SEAL-RESIZE
+memfd: SHARE-DUP
+memfd: SHARE-MMAP
+memfd: SHARE-OPEN
+memfd: SHARE-FORK
+memfd: SHARE-DUP (shared file-table)
+memfd: SHARE-MMAP (shared file-table)
+memfd: SHARE-OPEN (shared file-table)
+memfd: SHARE-FORK (shared file-table)
+memfd: DONE
+Starting test ./default/cachedrop
+100+0 records in
+100+0 records out
+104857600 bytes (105 MB, 100 MiB) copied, 0.0466909 s, 2.2 GB/s
+10+0 records in
+10+0 records out
+10485760 bytes (10 MB, 10 MiB) copied, 0.0253874 s, 413 MB/s
+TestPASS: /proc/sys/vm/drop_caches PASS
+Starting test ./default/modsign
+Successfully loaded signed module
+Successfully loaded unsigned module
+Starting test ./default/libhugetlbfs
+Starting test ./default/posix_timers
+Testing posix timers. False negative may happen on CPU execution 
+based timers if other threads run on the CPU...
+Check itimer virtual... [OK]
+Check itimer prof... [OK]
+Check itimer real... [OK]
+Check timer_create() per thread... [OK]
+Check timer_create() per process... [OK]
+Starting test ./default/paxtest
+Executable heap (mprotect)               : Vulnerable
+Starting test ./default/sysfs-perms
+Found world-writable files in sysfs.
+/sys/kernel/debug/ieee80211/phy0/rc/fixed_rate_idx
+Starting test ./default/timer-overhead
+Starting test ./default/mq-memory-corruption
+Test PASSED 
+Test PASSED 
+Test PASSED 
+Test PASSED 
+Test PASSED 
+Test PASSED 
+Test PASSED 
+Test PASSED 
+Test PASSED 
+Test PASSED 
+Starting test ./default/selinux-dac-controls
+<no matches>
+Starting test ./default/stack-randomness
+Starting test ./default/insert_leap_second
+Setting time to speed up testing
+Running for 1 iterations. Press ctrl-c to stop
+
+Setting time to Sat Dec 28 05:29:50 2019
+Scheduling leap second for Sat Dec 28 05:30:00 2019
+Sat Dec 28 05:29:57 2019 +    206 us (37)	TIME_INS
+Sat Dec 28 05:29:57 2019 + 500340 us (37)	TIME_INS
+Sat Dec 28 05:29:58 2019 +    545 us (37)	TIME_INS
+Sat Dec 28 05:29:58 2019 + 500760 us (37)	TIME_INS
+Sat Dec 28 05:29:59 2019 +    961 us (37)	TIME_INS
+Sat Dec 28 05:29:59 2019 + 501205 us (37)	TIME_INS
+Sat Dec 28 05:29:59 2019 +   1485 us (38)	TIME_OOP
+Sat Dec 28 05:29:59 2019 + 501681 us (38)	TIME_OOP
+Sat Dec 28 05:30:00 2019 +   1835 us (38)	TIME_WAIT
+Sat Dec 28 05:30:00 2019 + 502024 us (38)	TIME_WAIT
+Sat Dec 28 05:30:01 2019 +   2227 us (38)	TIME_WAIT
+Sat Dec 28 05:30:01 2019 + 502381 us (38)	TIME_WAIT
+Sat Dec 28 05:30:02 2019 +   2578 us (38)	TIME_WAIT
+Leap complete
+
